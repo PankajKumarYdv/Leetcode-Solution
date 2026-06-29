@@ -3,7 +3,7 @@ public:
     int numOfStrings(vector<string>& patterns, string word) {
         int res = 0;
         for (const auto& pattern : patterns) {
-            if (word.find(pattern) != std::string::npos) {
+            if (word.find(pattern) != string::npos) {
                 res++;
             }
         }
