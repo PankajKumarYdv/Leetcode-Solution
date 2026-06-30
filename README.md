@@ -62,9 +62,8 @@ Each solution generally includes:
 
 ## 💻 Languages Used
 
-* Java ☕ *(Primary)*
-* C++ *(Occasionally)*
-* Python *(Occasionally)*
+* C++ 
+* Python 
 
 ---
 
