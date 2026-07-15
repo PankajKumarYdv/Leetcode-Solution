@@ -43,6 +43,7 @@ public:
 
     int gcdOfOddEvenSums(int n) {
         // return firstApproach(n); 
-        return secondApproach(n); 
+        // return secondApproach(n); 
+        return thirdApproach(n); 
     }
 };
