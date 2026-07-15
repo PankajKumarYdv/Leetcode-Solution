@@ -1,6 +1,6 @@
 class Solution {
 public:
-    int gcdOfOddEvenSums(int n) {
+    int firstApproach(int n){
         int oddSum = 0; 
         int evenSum = 0; 
         bool flag = true; 
@@ -17,5 +17,17 @@ public:
 
         return gcd(oddSum, evenSum); 
 
+    }
+
+    int secondApproach(int n){
+        int sumOfEvenNumber = n*(n+1); 
+        int sumOfOddNumber = n*n; 
+        cout << "Even : " << sumOfEvenNumber << " Odd : " << sumOfOddNumber << endl; 
+        return gcd(sumOfOddNumber, sumOfEvenNumber); 
+    }
+
+    int gcdOfOddEvenSums(int n) {
+        
+        return secondApproach(n); 
     }
 };
