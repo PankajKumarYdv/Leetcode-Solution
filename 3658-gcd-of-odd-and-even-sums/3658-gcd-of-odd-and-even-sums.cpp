@@ -26,6 +26,21 @@ public:
         return gcd(sumOfOddNumber, sumOfEvenNumber); 
     }
 
+
+    int thirdApproach(int n){
+        /*
+        previous formula 
+        n*(n-1) and n*n 
+        then : 
+            gcd(n*n , n*(n+1));
+            n gcd(n, (n+1))
+            we knew that gcd of any consicutive number is : 1; then 
+            n * 1; will be the the acutal result. 
+        */
+
+        return n; 
+    }
+
     int gcdOfOddEvenSums(int n) {
         // return firstApproach(n); 
         return secondApproach(n); 
