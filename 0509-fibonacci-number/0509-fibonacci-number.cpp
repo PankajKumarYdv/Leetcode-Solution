@@ -1,8 +1,8 @@
 class Solution {
 public:
-    
-    // vector <int> dp_array{40,-1};  
-    vector<int> dp_array = vector<int>(40, -1);
+    // declaring vector for fixed size and default value
+    vector<int> dp_array = vector<int>(31, -1); // <- This is how we declare this in class. as attrubutes. 
+
     int fib(int n) {
         if(n==0) return 0; 
         if(n==1) return 1; 
