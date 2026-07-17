@@ -1,10 +1,7 @@
 class Solution {
 public:
     vector<int> gcdValues(vector<int>& nums, vector<long long>& queries) {
-        int max_val = 0;
-        for (int num : nums) {
-            max_val = max(max_val, num);
-        }
+        int max_val = *max_element(nums.begin(), nums.end()); 
 
         // Step 1: Precompute the Möbius function using a linear sieve
         vector<int> mu(max_val + 1, 0);
