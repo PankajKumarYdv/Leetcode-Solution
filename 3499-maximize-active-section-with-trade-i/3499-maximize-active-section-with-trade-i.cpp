@@ -1,27 +1,26 @@
 class Solution {
 public:
     int maxActiveSectionsAfterTrade(string s) {
-        int n = s.length();
-        int totalOnes = 0;          
-        int currentIndex = 0;        
-        int previousZeroSegment = INT_MIN; 
-        int maxZeroWindow = 0;      
-        while (currentIndex < n) {
-            int segmentEnd = currentIndex + 1;
-            while (segmentEnd < n && s[segmentEnd] == s[currentIndex]) {
-                segmentEnd++;
+        int n = s.length(); 
+        int activeCount = count(begin(s), end(s), '1'); 
+        vector<int> inactiveBlocks; 
+
+        int i = 0; 
+        while(i < n){
+            if(s[i] == '0'){
+                int start = i; 
+                while(i < n && s[i] == '0') i++; 
+                inactiveBlocks.push_back(i-start); 
+            }else{
+                i++; 
             }
-            int segmentLength = segmentEnd - currentIndex;
-          
-            if (s[currentIndex] == '1') {
-                totalOnes += segmentLength;
-            } else {
-                maxZeroWindow = std::max(maxZeroWindow, previousZeroSegment + segmentLength);
-                previousZeroSegment = segmentLength;
-            }
-        
-            currentIndex = segmentEnd;
         }
-        return totalOnes + maxZeroWindow;
+
+        int maxPairSum  = 0; 
+        for(int i = 1; i < inactiveBlocks.size(); i++){
+            maxPairSum = max(maxPairSum, inactiveBlocks[i] + inactiveBlocks[i-1]); 
+        }
+
+        return maxPairSum + activeCount; 
     }
 };
