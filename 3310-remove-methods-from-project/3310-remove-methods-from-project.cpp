@@ -1,9 +1,9 @@
 class Solution {
 public:
     vector<int> remainingMethods(int n, int k, vector<vector<int>>& invocations) {
-        vector<vector<int>> adj(n); //u -> {ngbr1, ngbr2} //O(V+E)
-        vector<int> inDegree(n, 0); //O(V)
-        vector<bool> suspicious(n, false);//O(V)
+        vector<vector<int>> adj(n); 
+        vector<int> inDegree(n, 0); 
+        vector<bool> suspicious(n, false);
 
         for(auto &edge : invocations) {
             int u = edge[0];
@@ -46,7 +46,7 @@ public:
         }
 
         if(cannotRemove) {
-            vector<int> vec(n); //0, 1, 2,... n-1
+            vector<int> vec(n); 
             for(int i = 0; i < n; i++) {
                 vec[i] = i;
             }
