@@ -1,13 +1,12 @@
 class Solution {
 public:
-    /*
     bool dfs(int node, vector<vector<int>>& adj, vector<int>& vis, vector<int>& pathVis){
         vis[node] = 1; 
         pathVis[node] = 1; 
 
         for(int neigh : adj[node]){
             if(!vis[neigh]){
-                if(dfs(neigh, adj, vis, pathVis)); 
+                if(dfs(neigh, adj, vis, pathVis))
                 return true; 
             }else if(pathVis[neigh]){
                 return true; 
@@ -35,8 +34,9 @@ public:
         }  
         return true; 
     }
-    */
+    
 
+    /*
     bool canFinish(int V, vector<vector<int>>& edges){
         vector<vector<int>> adj(V); 
         vector <int> indegree(V, 0); 
@@ -68,4 +68,5 @@ public:
         }
         return count == V; 
     }
+    */
 };
