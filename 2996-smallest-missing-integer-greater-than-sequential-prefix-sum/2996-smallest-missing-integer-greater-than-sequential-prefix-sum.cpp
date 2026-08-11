@@ -19,3 +19,6 @@ public:
         return prefix_sum;
     }
 };
+
+
+// Java Code 
